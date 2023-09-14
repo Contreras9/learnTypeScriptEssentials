@@ -1,28 +1,16 @@
-import { add } from "./util";
+type Person = { name: string; hairColor?: string; age?: number };
 
-console.log(`The sum of 1 and 2 is ${add(1, 2)}`);
+type HairColor = string | undefined;
 
-let num1: number = 9;
-let pi: number = 3.1415;
-
-let intro: string = "Hello";
-
-let isConnected: boolean = true;
-
-let person: object = {
+let person: Person = {
   name: "Yared",
   hairColor: "brown",
+  age: 17,
 };
 
-let digits: Array<number> = [3, 6, 9];
+let person2: Person = {
+  name: "Mosab",
+};
 
-let personTuple: [string, number, boolean] = ["Yared", 9, true];
-
-let something: any = "Hey!";
-something = 18;
-something = true;
-
-let data: any[] = ["Hey", 3, true, []];
-
-let nothing: undefined = undefined;
-let anotherNothing: null = null;
+// let yaridHairColor: string = person.hairColor || "Bald";
+let yaridHairColor: HairColor = person.hairColor;
